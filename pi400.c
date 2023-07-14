@@ -182,7 +182,8 @@ int main() {
     }
 #endif
 
-    grab_both();
+    // Uncomment this to grab input on program launch.
+    // grab_both();
 
 
 #ifndef NO_OUTPUT
