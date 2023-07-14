@@ -23,9 +23,9 @@ You may need to *inject* additional power from an official supply, using somethi
 
 Add `dtoverlay=dwc2` to `/boot/config.txt`
 
-Reboot!
+`echo libcomposite | sudo tee /etc/modules-load.d/libcomposite.conf`
 
-`sudo modprobe libcomposite`
+Reboot!
 
 Grab the latest pi400kb for your system from releases: https://github.com/Gadgetoid/pi400kb/releases
 
