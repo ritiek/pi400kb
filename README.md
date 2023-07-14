@@ -21,9 +21,9 @@ Thank you to all the people who dropped by with kind words, suggestions and impr
 
 Add `dtoverlay=dwc2` to `/boot/config.txt`
 
-Reboot!
+`echo libcomposite | sudo tee /etc/modules-load.d/libcomposite.conf`
 
-`sudo modprobe libcomposite`
+Reboot!
 
 Grab the latest pi400kb for your system from releases: https://github.com/Gadgetoid/pi400kb/releases
 
