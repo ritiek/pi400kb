@@ -11,7 +11,7 @@ add_compile_definitions(_GNU_SOURCE)
 option(NO_OUTPUT "Disable USB HID output" OFF)
 
 if(NOT HOOK_PATH)
-    set(HOOK_PATH "/home/pi/pi400kb/hook.sh" CACHE STRING "Path to .sh toggle hook")
+    set(HOOK_PATH "/usr/bin/pi400kb-hook" CACHE STRING "Path to .sh toggle hook")
 endif()
 
 if(NOT KEYBOARD_VID)
