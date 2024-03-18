@@ -37,9 +37,9 @@ Grab the latest pi400kb for your system from releases: https://github.com/Gadget
 
 Your keyboard input will be detached from your Pi while it's forwarded to your host computer.
 
-Press `Ctrl + Raspberry` to grab/release your keyboard and mouse, switching between local use and USB.
+Press `Right Ctrl + Raspberry` to grab/release your keyboard and mouse, switching between local use and USB.
 
-Press `Ctrl + Shift + Raspberry` (on the grabbed keyboard) to exit.
+Press `Right Ctrl + Shift + Raspberry` (on the grabbed keyboard) to exit.
 
 ### Mouse Support
 
