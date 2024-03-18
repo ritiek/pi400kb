@@ -224,7 +224,7 @@ int main() {
 #endif
 
                 // Trap Ctrl + Raspberry and toggle capture on/off
-                if(keyboard_buf.data[0] == 0x09){
+		if(keyboard_buf.data[0] == 0x18){
                     if(grabbed) {
                         ungrab_both();
                         send_empty_hid_reports_both();
@@ -233,7 +233,7 @@ int main() {
                     }
                 }
                 // Trap Ctrl + Shift + Raspberry and exit
-                if(keyboard_buf.data[0] == 0x0b){
+		if(keyboard_buf.data[0] == 0x1a){
                     running = 0;
                     break;
                 }
