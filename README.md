@@ -73,6 +73,40 @@ Finally copy pi400kb.conf into /etc/modules-load.d/:
 sudo cp pi400kb.conf /etc/modules-load.d/
 ```
 
+### NixOS
+
+If you're running NixOS on your RPi and have flakes enabled, you can enable the provided module by adding
+the flake input:
+
+```nix
+pi400kb-nix = {
+  url = "git+https://github.com/Gadgetoid/pi400kb?ref=main&submodules=1";
+  inputs.nixpkgs.follows = "nixpkgs"
+};
+```
+
+You can then enable the service in your RPi's NixOS configuration:
+
+```nix
+imports = [
+  inputs.pi400kb-nix.nixosModules.pi400kb
+];
+
+services.pi400kb = {
+  enable = true;
+  # Optionally specify any keyboard and mouse overrides.
+  # For example, to build for Pi500:
+  keyboard = {
+    vendorID = "0x2e8a";
+    productID = "0x0010";
+    device = "/dev/input/by-id/usb-Raspberry_Pi_Ltd_Pi_500_Keyboard-event-kbd";
+  };
+};
+```
+
+Rebuild your configuration and reboot your Pi so that the necessary kernel modules get loaded.
+
+
 ## Building & Contributing
 
 ### Building
